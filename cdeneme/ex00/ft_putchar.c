@@ -12,7 +12,10 @@
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void ft_putchar(char c)
 {
-	write(1, &c, 1);
+    // 'write' fonksiyonunu kullanarak, 'c' karakterini ekrana yazdırıyorum.
+    // 1, çıktının ekrana yönlendirileceğini belirtir (standart çıkış).
+    // &c, yazdırılacak olan karakterin bellekteki adresidir.
+    write(1, &c, 1);
 }
