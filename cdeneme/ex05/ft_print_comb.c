@@ -12,31 +12,34 @@
 
 #include <unistd.h>
 
-void ft_print_comb (void)
+void ft_print_comb(void)
 {
     int a;
     int b;
     int c;
-    a ='0'
-    while(a<='7')
+
+    a = '0';  // 'a' harfini '0' olarak başlatıyorum.
+    while (a <= '7')  // 'a' '7' harfine kadar ilerleyecek.
     {
-        while
-         b = a+1;
-        while(b<='8')
+        b = a + 1;  // 'b', 'a' harfinden bir fazla olacak şekilde başlatıyorum.
+        while (b <= '8')  // 'b' '8' harfine kadar ilerleyecek.
         {
-            while
-            c = b+1;
-            while(c<='9')
+            c = b + 1;  // 'c', 'b' harfinden bir fazla olacak şekilde başlatıyorum.
+            while (c <= '9')  // 'c' '9' harfine kadar ilerleyecek.
             {
-                write(1,&a,1);
-                write(1,&b,1);
-                write(1,&c,1);
-                if(a != '7')
-                 write(1,", ",2);
-                c++;
+                // 'a', 'b' ve 'c' harflerini sırasıyla ekrana yazdırıyorum.
+                write(1, &a, 1);
+                write(1, &b, 1);
+                write(1, &c, 1);
+
+                // Sonuçta sadece '7' kombinasyonu sonrası virgül ve boşluk yazdırmıyorum.
+                if (a != '7')
+                    write(1, ", ", 2);  // Virgül ve boşluk ekliyorum.
+
+                c++;  // 'c'yi bir arttırıyorum.
             }
-            b++;
+            b++;  // 'b'yi bir arttırıyorum.
         }
-        a++;
+        a++;  // 'a' yı bir arttırıyorum.
     }
 }
